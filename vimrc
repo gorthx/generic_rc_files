@@ -14,3 +14,12 @@ let perl_fold=1
 let perl_fold_blocks=1
 
 :map ,t :!prove -Iliv "%"<cr> " run a test without shelling out
+:map ,c :!perl -c "%"<cr> " check for silliness without shelling out
+
+" apparently I have some bad typing habits
+highlight ExtraWhitespace ctermbg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
