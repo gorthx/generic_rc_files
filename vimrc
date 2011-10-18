@@ -13,6 +13,7 @@ highlight PreProc cterm=bold ctermfg=green " make bash comments readable
 let perl_fold=1
 let perl_fold_blocks=1
 
+:map q !}fmt " wrap text
 :map ,t :!prove -Iliv "%"<cr> " run a test without shelling out
 :map ,c :!perl -c "%"<cr> " check for silliness without shelling out
 
@@ -23,3 +24,18 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" stuff from Damian Conway's advanced vim class
+augroup HelpInTabs
+    au!
+    au BufEnter *.txt call HelpInNewTab()
+
+    function! HelpInNewTab ()
+        if &buftype == 'help'
+            execute "normal \<C-W>T"
+        endif
+    endfunction
+augroup END
+
+:set backspace=indent,eol,start
+:set smartcase
