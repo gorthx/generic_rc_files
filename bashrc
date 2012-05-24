@@ -15,6 +15,11 @@ export GIT_PS1_SHOWDIRTYSTATE=42
 export GIT_PS1_SHOWSTASHSTATE=42
 export GIT_EDITOR='/usr/local/bin/vim'
 
+alias ga='git add'
+alias gc='git commit'
+alias gs='git status'
+alias gd='git diff'
+
 # don't attempt to tab-complete empty commands
 shopt -s no_empty_cmd_completion
 
