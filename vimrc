@@ -13,7 +13,6 @@ highlight PreProc cterm=bold ctermfg=green " make bash comments readable
 let perl_fold=1
 let perl_fold_blocks=1
 
-:map q !}fmt " wrap text
 :map ,t :!prove -Iliv "%"<cr> " run a test without shelling out
 :map ,c :!perl -c "%"<cr> " check for silliness without shelling out
 
