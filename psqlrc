@@ -1,3 +1,5 @@
 \pset null '[null]'
 \set HISTFILE ~/.psql_history- :DBNAME
-\set AUTOCOMMIT off
+\set AUTOCOMMIT on
+\timing
+\set top 'SELECT waiting, usename, procpid, COALESCE(now()-query_start, now()-backend_start) AS duration, client_addr, current_query FROM pg_stat_activity WHERE current_query <> ''<IDLE>'' ORDER BY duration;'
