@@ -23,6 +23,7 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+:command C let @/=""
 
 " stuff from Damian Conway's advanced vim class
 augroup HelpInTabs
