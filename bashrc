@@ -9,7 +9,10 @@ export HISTCONTROL=ignoredups
 alias cpan='perl -MCPAN -e shell'
 
 # git command completion
-source /app/usr/local/bin/git-completion.bash
+# git.kernel.org/cgit/git/git.git/plain/contrib/completion/git-completion.bash
+# git.kernel.org/cgit/git/git.git/plain/contrib/completion/git-prompt.sh
+source /usr/bin/git-completion.bash
+source /usr/bin/git-prompt.sh
 # fun git colors
 export GIT_PS1_SHOWDIRTYSTATE=42
 export GIT_PS1_SHOWSTASHSTATE=42
