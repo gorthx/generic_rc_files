@@ -20,7 +20,7 @@ export GIT_EDITOR='/usr/local/bin/vim'
 
 alias ga='git add'
 alias gc='git commit'
-alias gs='git status'
+alias gits='git status'
 alias gd='git diff'
 
 # don't attempt to tab-complete empty commands
