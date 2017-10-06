@@ -39,3 +39,5 @@ augroup END
 
 :set backspace=indent,eol,start
 :set smartcase
+:set paste
+:set ruler
