@@ -38,8 +38,10 @@ export GIT_EDITOR='/usr/local/bin/vim'
 alias ga='git add'
 alias gc='git commit'
 alias gits='git status' # not gs because that conflicts with ghostscript
+alias grc='git rebase --continue'
+alias grs='git rebase --skip'
 alias gd='git diff'
-
+alias gp='git fetch --all --prune; git gc'
 
 # ... I should really get a .bash_aliases file
 alias cpan='perl -MCPAN -e shell'
