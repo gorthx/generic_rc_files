@@ -41,3 +41,5 @@ augroup END
 :set smartcase
 :set paste
 :set ruler
+
+au BufRead /tmp/psql.edit.* set syntax=sql
