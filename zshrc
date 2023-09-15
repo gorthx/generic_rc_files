@@ -8,6 +8,9 @@ setopt interactivecomments
 export HISTCONTROL=ignoredupso
 export LESS="-isX"
 
+# mac-specific
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+
 alias ga='git add'
 alias gc='git commit'
 alias gits='git status' # not gs because that conflicts with ghostscript
