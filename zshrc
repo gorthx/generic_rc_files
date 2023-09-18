@@ -6,7 +6,7 @@ PS1="%n@%m - %~${NEWLINE}:::-->"
 setopt interactivecomments
 
 export HISTCONTROL=ignoredupso
-export LESS="-isX"
+export LESS=eFRX
 
 # mac-specific
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
