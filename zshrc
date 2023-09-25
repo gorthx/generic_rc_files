@@ -8,6 +8,8 @@ setopt interactivecomments
 export HISTCONTROL=ignoredupso
 export LESS=eFRX
 
+alias hg='history 1 | grep'
+
 # mac-specific
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
