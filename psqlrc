@@ -1,5 +1,5 @@
 \pset null '[null]'
 \set HISTFILE ~/.psql_history- :DBNAME
---\set AUTOCOMMIT on
 \timing
+-- just type in ":top" from psql to use this
 \set top 'SELECT wait_event, usename, pid, COALESCE(now()-query_start, now()-backend_start) AS duration, client_addr, query FROM pg_stat_activity WHERE state <> ''idle'' ORDER BY duration;'
