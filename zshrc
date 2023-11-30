@@ -1,6 +1,12 @@
+
+# git.kernel.org/cgit/git/git.git/plain/contrib/completion/git-prompt.sh
+source /usr/local/bin/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=42
+export GIT_PS1_SHOWSTASHSTATE=42
+
 # zsh version of my standard prompt
 NEWLINE=$'\n'
-PS1="%n@%m - %~${NEWLINE}:::-->"
+setopt PROMPT_SUBST ; PS1='%n@%m - %~${NEWLINE}$(__git_ps1 "(%s) "):::-->'
 
 # zsh allow comments on the command line
 setopt interactivecomments
@@ -8,6 +14,7 @@ setopt interactivecomments
 export HISTCONTROL=ignoredupso
 export LESS=eFRX
 
+# this is just silly
 alias hg='history 1 | grep'
 
 # mac-specific
